@@ -4,6 +4,25 @@ import static ru.skypro.Main.employee;
 
 public class CodeBlock {
 
+    public static boolean employeeList() {
+
+        employee[0] = new Employee("Силин Лукьян Федосеевич", 1, 40_000);
+        employee[1] = new Employee("Хохлова Лада Еремеевна", 2, 42_000);
+        employee[2] = new Employee("Шестаков Руслан Наумович", 3, 37_000);
+        employee[3] = new Employee("Турова Эрика Филипповна", 4, 31_000);
+        employee[4] = new Employee("Савельев Роберт Валентинович", 5, 41_000);
+        employee[5] = new Employee("Мартынов Платон Феликсович", 6, 47_000);
+        employee[6] = new Employee("Савина Инара Серапионовна", 7, 39_000);
+        employee[7] = new Employee("Сысоев Игнат Степанович", 8, 36_000);
+        employee[8] = new Employee("Петухова Алиса Глебовна", 9, 43_000);
+        employee[9] = new Employee("Константинова Богдана Лукьяновна", 10, 45_000);
+
+        for (Employee i : employee) {
+            System.out.println(i);
+        }
+        return false;
+    }
+
     public static int employeeSum() {
         int sum = 0;
         for (Employee i : employee) {
@@ -35,5 +54,12 @@ public class CodeBlock {
 
     public static int averageSum() {
         return employeeSum()/employee.length;
+    }
+
+    public static String fullName() {
+        for (Employee i : employee) {
+            System.out.println(i.getFullName());
+        }
+        return null;
     }
 }
